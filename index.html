@@ -1,266 +1,312 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8"></meta>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Limelight&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <title>Our Products</title>
-<style>
-/*flex objects and containers*/
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 100px;
-}
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 10px;
-}
+    <style>
+        /*flex objects and containers*/
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 100px;
+        }
 
-.column {
-  flex-basis: 100%;
-  justify-content: space-around;
-  padding: 10px;
-}
-.flex-box {
-    border: 1px solid black;
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 5px;
-}
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
 
-@media screen and (min-width: 800px) {
-  .column {
-    flex: 1;
-    justify-content: space-around;
-  }
-}
-@media screen and (min-width: 800px) {
-  ._25 {
-    flex: 2.5;
-  }
-  ._55 {
-    flex: 5.5;
-  }
-  ._20 {
-    flex: 2;
-  }
-}
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-/*text and body ojects*/
-.text-center {
-    text-align: center;
-}
-body {
-    font-family: 'Cardo', serif;
-    color: #55524b;
-    background-color: #f1f0eb;
-    background-size: 100% 100%;
-    background-attachment: fixed;
-}
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Limelight', cursive;
-    color: #4055a6
-}
-p {
-    font-family: 'Josefin Sans', sans-serif;
-    color: #55524b;
-    font-size: 18px;
-}
-/*navigation bar*/
-.topnav {
-    background-color: #f1f0eb;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-.topnav a {
-    float:none;
-    color: #55524b;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 18px;
-}
-.topnav a:hover {
-    /*background-color:#ffce00;*/
-    color: white;
-    font-style: italic;
-}
-.topnav a.active {
-    background-color: #484d5c;
-    color: white;
-}
-.topnav form {
-    float:inline-end;
-    color: #55524b;
-    /*text-align: right;*/
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 18px;
-}
-.column form {
-    float:inline-end;
-}
-#video {
-    float: left;
-}
-#productimage {
-    float: right;
-}
-input[type=email], select, textarea {
-    width: 250px;
-    padding: 12px;
-    border: 1px solid #dddddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-    /*margin-top: 6px;
+        .column {
+            flex-basis: 100%;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        .flex-box {
+            border: 1px solid black;
+            max-width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 5px;
+        }
+
+        @media screen and (min-width: 800px) {
+            .column {
+                flex: 1;
+                justify-content: space-around;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            ._25 {
+                flex: 2.5;
+            }
+
+            ._55 {
+                flex: 5.5;
+            }
+
+            ._20 {
+                flex: 2;
+            }
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /*text and body ojects*/
+        .text-center {
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Cardo', serif;
+            color: #55524b;
+            background-color: #f1f0eb;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Limelight', cursive;
+            color: #4055a6
+        }
+
+        p {
+            font-family: 'Josefin Sans', sans-serif;
+            color: #55524b;
+            font-size: 18px;
+        }
+
+        /*navigation bar*/
+        .topnav {
+            background-color: #f1f0eb;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .topnav a {
+            float: none;
+            color: #55524b;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .topnav a:hover {
+            /*background-color:#ffce00;*/
+            color: white;
+            font-style: italic;
+        }
+
+        .topnav a.active {
+            background-color: #484d5c;
+            color: white;
+        }
+
+        .topnav form {
+            float: inline-end;
+            color: #55524b;
+            /*text-align: right;*/
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .column form {
+            float: inline-end;
+        }
+
+        #video {
+            float: left;
+        }
+
+        #productimage {
+            float: right;
+        }
+
+        input[type=email],
+        select,
+        textarea {
+            width: 250px;
+            padding: 12px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            /*margin-top: 6px;
     margin-bottom: 6px;*/
-}
-input[type=select] {
-    width: 250px;
-    padding: 12px;
-    border: 1px solid #dddddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-    /*margin-top: 6px;
+        }
+
+        input[type=select] {
+            width: 250px;
+            padding: 12px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            /*margin-top: 6px;
     margin-bottom: 6px;*/
-}
-input[type=number], select, textarea {
-    width: 250px;
-    padding: 12px;
-    border: 1px solid #dddddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-    /*margin-top: 6px;
+        }
+
+        input[type=number],
+        select,
+        textarea {
+            width: 250px;
+            padding: 12px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            /*margin-top: 6px;
     margin-bottom: 6px;*/
-}
-.myButton {
-	box-shadow:inset 0px 1px 0px 0px #a6827e;
-	background-color:#7d5d3b;
-	border-radius:3px;
-	border:1px solid #54381e;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:13px;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #4d3534;
-}
-.myButton:hover {
-	background-color:#634b30;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}
-#bookimage {
-    float:inline-end;
-}
-.centered {
-    text-align: center;
-}
-</style>
+        }
+
+        .myButton {
+            box-shadow: inset 0px 1px 0px 0px #a6827e;
+            background-color: #7d5d3b;
+            border-radius: 3px;
+            border: 1px solid #54381e;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 13px;
+            padding: 6px 24px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #4d3534;
+        }
+
+        .myButton:hover {
+            background-color: #634b30;
+        }
+
+        .myButton:active {
+            position: relative;
+            top: 1px;
+        }
+
+        #bookimage {
+            float: inline-end;
+        }
+
+        .centered {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-<div id="header">
-    <nav id="nav-bar" class="topnav">
-    <img id="header-img" src="https://i.imgur.com/cczrZQg.png">
-    <a class="nav-link" href="#video">Video</a>
-    <a class="nav-link" href="#productimage">Products</a>
-    <a class="nav-link" href="#email">Contact</a>
-    <form id="form" action="https://www.freecodecamp.org/email-submit">
-        <input id="email" type="email" name="email" required placeholder="UBIK IN YOUR EMAIL">
-        <input type="submit" id="submit" class="myButton" value="Submit Yourself"></input>
-    </form> 
-</nav> 
-</div> 
-    <div class="container">
-    <h1 id=title>It's Ubik!</h1>
-    <h2 id=description>Just what you need</h2>
-    <div class="flex-box" div id="product1">
-        <div class="row">
-            <div class="column">
-                <img id="productimage" src=https://i.imgur.com/iB6s13u.jpg alt="ubik ad 1">
-            </div>
-            <div class="column">
-                <h2>Ubik! Never-Ending Blade</h2>
-                <p>We wanted to give you a shave like no other you’ve ever had. We said it’s about time a man’s face got a little loving, we said. With Ubik self-winding Swiss chromium never ending blade, the days of scrape scrape scrape are over. So try Ubik! Use only as directed and with caution.</p>
-            </div>          
-                <div class="column">
-            <form id="form" action="">
-                <input id="quantity" type="number" min="0" max="10" placeholder="Quantity">
-                <input id="submit" class="myButton" type="submit" value="Buy!">
+    <div id="header">
+        <nav id="nav-bar" class="topnav">
+            <img id="header-img" src="https://i.imgur.com/cczrZQg.png">
+            <a class="nav-link" href="#video">Video</a>
+            <a class="nav-link" href="#productimage">Products</a>
+            <a class="nav-link" href="#email">Contact</a>
+            <form id="form" action="https://www.freecodecamp.org/email-submit">
+                <input id="email" type="email" name="email" required placeholder="UBIK IN YOUR EMAIL">
+                <input type="submit" id="submit" class="myButton" value="Submit Yourself"></input>
             </form>
-                </div>
-        </div>
+        </nav>
     </div>
-    <div class="flex-box" div id="product2">
-        <div class="row">
-            <div class="column">
-                <img id="productimage" src=https://i.imgur.com/1rWjSFq.jpg alt="ubik ad 2">
-            </div>
-            <div class="column">
-                <h2>Ubik! Hygenic Spray</h2>
-                <p>Is perspiration odor taking you of the swim? Ubik deodorant spray or roll-on stick ends worries of offending. Brings you back to the happening. Safe when used as directed in a conscientious program of body hygiene.</p>
-            </div>          
-                <div class="column">
-                    <form id="form" action="">
-                        <input id="quantity" type="number" min="0" max="10" placeholder="Quantity">
-                        <input id="submit" class="myButton" type="submit" value="Buy!">
-                    </form>
-                </div>
-        </div>
-    </div>
-    <div class="flex-box" div id="product3">
-        <div class="row">
-            <div class="column">
-                <img id="productimage" src=https://i.imgur.com/7shakKP.jpg alt="ubik ad 3">
-            </div>
-            <div class="column">
-                <h2>Ubik! Miracle Coating</h2>
-                <p>Perk up those pouting household surfaces with the new miracle Ubik. The easy to apply, extra shiny, nonstick plastic coating is entirely harmless if used as directed. Saves endless scrubbing, glides you right out of the kitchen.</p> 
-            </div>          
-                <div class="column">
-                    <form id="form" action="">
-                        <input id="quantity" type="number" min="0" max="10" placeholder="Quantity">
-                        <input id="submit" class="myButton" type="submit" value="Buy!">
-                    </form>
-                </div>
-        </div>
-    </div>
+    <div class="container">
+        <h1 id=title>It's Ubik!</h1>
+        <h2 id=description>Just what you need</h2>
+        <div class="flex-box" div id="product1">
             <div class="row">
                 <div class="column">
-                    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/P1qMKFMrpro" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="column" class="centered">
-                    <p>I am Ubik. Before the universe was, I am. I made the suns. I made the worlds.</p>
-                    <p>I created the lives and the places they inhabit; I move them here, I put them there.</p>
-                    <p>They go as I say, then do as I tell them.</p>
-                    <p>I am the word and my name is never spoken, the name which no one knows.</p>
-                    <p>I am called Ubik, but that is not my name. I am. I shall always be.</p>
+                    <img id="productimage" src=https://i.imgur.com/iB6s13u.jpg alt="ubik ad 1">
                 </div>
                 <div class="column">
-                <img id="bookimage" src=https://i.imgur.com/zD2fQCx.jpg alt="PKD Ubik Book">
+                    <h2>Ubik! Never-Ending Blade</h2>
+                    <p>We wanted to give you a shave like no other you’ve ever had. We said it’s about time a man’s face
+                        got a little loving, we said. With Ubik self-winding Swiss chromium never ending blade, the days
+                        of scrape scrape scrape are over. So try Ubik! Use only as directed and with caution.</p>
+                </div>
+                <div class="column">
+                    <form id="form" action="">
+                        <input id="quantity" type="number" min="0" max="10" placeholder="Quantity">
+                        <input id="submit" class="myButton" type="submit" value="Buy!">
+                    </form>
                 </div>
             </div>
         </div>
+        <div class="flex-box" div id="product2">
+            <div class="row">
+                <div class="column">
+                    <img id="productimage" src=https://i.imgur.com/1rWjSFq.jpg alt="ubik ad 2">
+                </div>
+                <div class="column">
+                    <h2>Ubik! Hygenic Spray</h2>
+                    <p>Is perspiration odor taking you of the swim? Ubik deodorant spray or roll-on stick ends worries
+                        of offending. Brings you back to the happening. Safe when used as directed in a conscientious
+                        program of body hygiene.</p>
+                </div>
+                <div class="column">
+                    <form id="form" action="">
+                        <input id="quantity" type="number" min="0" max="10" placeholder="Quantity">
+                        <input id="submit" class="myButton" type="submit" value="Buy!">
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="flex-box" div id="product3">
+            <div class="row">
+                <div class="column">
+                    <img id="productimage" src=https://i.imgur.com/7shakKP.jpg alt="ubik ad 3">
+                </div>
+                <div class="column">
+                    <h2>Ubik! Miracle Coating</h2>
+                    <p>Perk up those pouting household surfaces with the new miracle Ubik. The easy to apply, extra
+                        shiny, nonstick plastic coating is entirely harmless if used as directed. Saves endless
+                        scrubbing, glides you right out of the kitchen.</p>
+                </div>
+                <div class="column">
+                    <form id="form" action="">
+                        <input id="quantity" type="number" min="0" max="10" placeholder="Quantity">
+                        <input id="submit" class="myButton" type="submit" value="Buy!">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/P1qMKFMrpro"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="column" class="centered">
+                <p>I am Ubik. Before the universe was, I am. I made the suns. I made the worlds.</p>
+                <p>I created the lives and the places they inhabit; I move them here, I put them there.</p>
+                <p>They go as I say, then do as I tell them.</p>
+                <p>I am the word and my name is never spoken, the name which no one knows.</p>
+                <p>I am called Ubik, but that is not my name. I am. I shall always be.</p>
+            </div>
+            <div class="column">
+                <img id="bookimage" src=https://i.imgur.com/zD2fQCx.jpg alt="PKD Ubik Book">
+            </div>
+        </div>
     </div>
-<script>
-</script>
+    </div>
+    </div>
+    </div>
+    <script>
+    </script>
 </body>
+
 </html>
